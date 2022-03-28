@@ -5,5 +5,5 @@
   - name: i want to install webserver on ansible ubuntu nodes
     apt: 
      name: "{{mywebpackforubuntu}}"
-    state: present
+     state: present
     when: ansible_os_family =="debian"
