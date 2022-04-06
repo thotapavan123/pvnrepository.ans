@@ -12,6 +12,6 @@
       
   - name: i want to install git
     apt:
-      name: "{myvar1}}"
+      name: "{{myvar1}}"
       state: present
     
