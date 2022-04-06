@@ -11,6 +11,7 @@
    state: directory
 
 - name:   i want to extract tar file
+  become_user: yes
   command: 
      cmd: sudo tar /home/ubuntu/apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
      creates: /opt/tomcat/LICENSE
