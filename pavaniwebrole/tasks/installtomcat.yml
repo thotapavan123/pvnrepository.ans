@@ -1,8 +1,9 @@
 ---
 - name: i want to download tomcat tar file
-  url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz
-  dest: /home/ubuntu/apache-tomcat-8*tar.gz
-  force_basic_auth: yes
+  get_url:
+   url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.5/bin/apache-tomcat-8.5.5.tar.gz
+   dest: /home/ubuntu/apache-tomcat-8*tar.gz
+   force_basic_auth: yes
 
 - name:  create tomcat directory
   file: 
