@@ -1,0 +1,15 @@
+---
+- name: i want to download tomcat tar file
+  url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz
+  dest: /home/ubuntu/apache-tomcat-8*tar.gz
+  force_basic_auth: yes
+
+- name:  create tomcat directory
+  file: 
+   path:  /opt/tomcat
+   state: directory
+
+- name:   i want to extract tar file
+  command: 
+     cmd: sudo tar xzvf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
+     creates: /opt/tomcat/LICENSE
